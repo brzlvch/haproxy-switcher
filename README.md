@@ -26,6 +26,15 @@ Then, save the configuration file and restart the HAProxy service
 sudo systemctl restart haproxy.service
 ```
 
+## Options
+
+> The order of arguments is **NOT important**
+
+- `-enable` - Enable the backend server
+- `-disable` - Enable the backend server
+- `-socket` - Path to socket file of HAProxy stats
+- `"backend/server"` - Path of "backend/server" for action 
+
 ## Using
 
 ```shell
@@ -35,12 +44,3 @@ OR
 
 bash haproxy-switcher.sh "web443/server-1" -socket "/var/run/haproxy_db.sock" -disable
 ```
-
-## Options
-
-> The order of arguments is **NOT important**
-
-- `-enable` - Enable the backend server
-- `-disable` - Enable the backend server
-- `-socket` - Path to socket file of HAProxy stats
-- `"backend/server"` - Path of "backend/server" for action 
