@@ -1,12 +1,12 @@
 # HAProxy backend server switcher
 
-This script uses HAProxy statistics via socket to enable/disable the backend server
+This script uses HAProxy stats (via socket) to enable/disable the backend server
 
 Docs — https://docs.haproxy.org/2.4/management.html#9.3
 
 ## Preliminary setup
 
-To begin with, install socat on Linux machine as seen below
+To begin with, install `socat` on Linux machine as seen below
 
 ```
 sudo apt install socat
@@ -38,7 +38,7 @@ bash haproxy-switcher.sh "web443/server-1" -socket "/var/run/haproxy_db.sock" -d
 
 ## Options
 
-> The order of arguments is *NOT important*
+> The order of arguments is **NOT important**
 
 - `-enable` - Enable the backend server
 - `-disable` - Enable the backend server
